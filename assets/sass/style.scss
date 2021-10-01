@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+
+body {
+    background-color: $bgColor;
+    display: flex;
+    flex-direction: column;
+}
+
+.container  {
+    width: 60%;
+    max-width: 80%;
+    min-height: 150px;
+    margin: 0 auto;
+    @include display(flex, space-around, center);
+    .category {
+        width: 45%;
+        @include display(flex, space-around, center);
+    }
+    
+    .products {
+        @include display(flex, space-evenly, center);
+        width: 45%;
+        padding: 0 30px;
+    }
+    
+    #products, #category {
+        border: none;
+        width: 200px;
+        text-align: center;
+    }
+}
+
+
+
+.addProducts {
+    width: 60%;
+    max-width: 80%;
+    min-height: 150px;
+    margin: 0 auto;
+
+    form {
+        width: 100%;
+        @include display(flex, space-around, center);
+
+        label {
+            width: 45%;
+            @include display(flex, center, center);
+            color: $textColor;
+        }
+
+        .fi {
+            background-color: $secondaryColor;
+            margin-left: 2rem;
+            font-size: 20px;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            background: $primaryColor;
+            color: $bgColor;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            border: none;
+            height: 25px;
+            outline: none;
+            &:hover {                
+                border: 1px solid $primaryColor;
+            }
+        }
+    }
+}

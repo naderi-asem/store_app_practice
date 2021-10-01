@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.4s linear;
+}
+
+body {
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 60%;
+  max-width: 80%;
+  min-height: 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .category {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .products {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 45%;
+  padding: 0 30px;
+}
+.container #products, .container #category {
+  border: none;
+  width: 200px;
+  text-align: center;
+}
+
+.addProducts {
+  width: 60%;
+  max-width: 80%;
+  min-height: 150px;
+  margin: 0 auto;
+}
+.addProducts form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.addProducts form label {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1b1b1b;
+}
+.addProducts form .fi {
+  background-color: #fff;
+  margin-left: 2rem;
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  background: #00bfff;
+  color: #e6e6e6;
+  text-align: center;
+  cursor: pointer;
+}
+.addProducts form input[type=text] {
+  border: none;
+  height: 25px;
+  outline: none;
+}
+.addProducts form input[type=text]:hover {
+  border: 1px solid #00bfff;
+}
+
+/*# sourceMappingURL=style.css.map */
