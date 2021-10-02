@@ -38,23 +38,36 @@ categoryList.addEventListener('click', (e) => {
 });
 
 addcategory.addEventListener('click', () => {
-    let newCategory = document.querySelector('#add-category').value;
-    if (newCategory.trim() !== "")
-        if (!categories.includes(newCategory)) {
-            categories.push(newCategory);
-            appendChilds(newCategory, categoryList);
+    let newCategory = document.querySelector('#add-category');
+    if (newCategory.value.trim() !== "")
+        if (!categories.includes(newCategory.value)) {
+            categories.push(newCategory.value);
+            appendChilds(newCategory.value, categoryList);
         }
-    newCategory = "";
+    newCategory.value = "";
     productSave("categories", categories);
 });
 
 addproduct.addEventListener('click', () => {
-    let newproduct = document.querySelector('#add-product').value;
-    if (newproduct.trim() !== "")
-        if (!products.includes(newproduct))
-            products.push(newproduct);
+    let newproduct = document.querySelector('#add-product');
+    if (newproduct.value.trim() !== "")
+        if (!products.includes(newproduct.value))
+            products.push(newproduct.value);
+    newproduct.value = "";
     productSave("products", products);
 });
+
+// addproduct.addEventListener('click', () => {
+//     let newproduct = document.querySelector('#add-product').value;
+//     if (newproduct.trim() !== "")
+//         if (!products.includes(newproduct)) {
+//             products.push(newproduct);
+//             if (newproduct.includes(categoryList.value))
+//                 appendChilds(newproduct, productsList);
+//         }
+//     newproduct = "";
+//     productSave("products", products);
+// });
 
 
 

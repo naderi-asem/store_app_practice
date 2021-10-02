@@ -5,11 +5,15 @@
 }
 
 @mixin media($size) {
-    @if ($size == SM) {
-        @media (max-width: 546px) {
+    @if ($size == L) {
+        @media (max-width: 1200px) {
             @content;
         } 
-    } @else if($size == M) {
+    } @else if ($size == M) {
+        @media (max-width: 992px) {
+            @content;
+        }
+    } @else if($size == SM) {
         @media (max-width: 768px) {
             @content;
         }

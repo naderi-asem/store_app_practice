@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #e6e6e6;
+  background-color: #ececec;
   display: flex;
   flex-direction: column;
 }
@@ -21,23 +21,34 @@ body {
   align-items: center;
 }
 .container .category {
-  width: 45%;
-  display: flex;
+  width: 100%;
+  display: grid;
   justify-content: space-around;
   align-items: center;
+  text-align: start;
 }
 .container .products {
-  display: flex;
+  display: grid;
   justify-content: space-evenly;
   align-items: center;
-  width: 45%;
+  width: 100%;
   padding: 0 30px;
+}
+.container h3 {
+  margin: 0 10px 15px 0;
+  color: #1b1b1b;
 }
 .container #products,
 .container #category {
   border: none;
-  width: 200px;
+  min-width: 240px;
+  height: 40px;
   text-align: center;
+  outline: none;
+}
+.container #products:hover,
+.container #category:hover {
+  outline: 2px solid #00bfff;
 }
 
 .addProducts {
@@ -53,54 +64,40 @@ body {
   align-items: center;
 }
 .addProducts form label {
-  width: 45%;
-  display: flex;
+  width: 100%;
+  display: grid;
   justify-content: center;
   align-items: center;
-  color: #1b1b1b;
+  grid-template-columns: repeat(240px, 240px);
+  grid-template-areas: "h4 h4" "input fi";
+  color: #00bfff;
+  margin-right: 30px;
+}
+.addProducts form h4 {
+  grid-area: h4;
+  margin: 0 10px 15px 0;
 }
 .addProducts form .fi {
-  background-color: #fff;
-  margin-left: 2rem;
+  grid-area: fi;
   font-size: 20px;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   background: #00bfff;
-  color: #e6e6e6;
+  color: #ececec;
   text-align: center;
   cursor: pointer;
 }
 .addProducts form input[type=text] {
+  grid-area: input;
+  width: 200px;
   border: none;
-  height: 25px;
+  padding: 15px;
+  height: 40px;
   outline: none;
 }
 .addProducts form input[type=text]:hover {
-  border: 1px solid #00bfff;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    width: 100%;
-    max-width: 98%;
-    padding: 10px;
-  }
-
-  .addProducts {
-    width: 100%;
-    padding: 10px;
-  }
-  .addProducts form {
-    flex-direction: column;
-    width: 100%;
-    max-width: 98%;
-    padding: 10px;
-  }
-  .addProducts form label {
-    margin: 20px 0;
-  }
+  border: 2px solid #00bfff;
 }
 
 /*# sourceMappingURL=style.css.map */
