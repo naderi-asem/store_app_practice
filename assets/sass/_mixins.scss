@@ -13,8 +13,12 @@
         @media (max-width: 992px) {
             @content;
         }
-    } @else if($size == SM) {
+    } @else if($size == Sm) {
         @media (max-width: 768px) {
+            @content;
+        }
+    } @else if($size == XSm) {
+        @media (max-width: 546px) {
             @content;
         }
     }

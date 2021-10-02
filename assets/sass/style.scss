@@ -13,16 +13,15 @@ body {
   min-height: 150px;
   margin: 0 auto;
   @include display(flex, space-around, center);
+
   .category {
     width: 100%;
     @include display(grid, space-around, center);
-    text-align: start
   }
 
   .products {
     @include display(grid, space-evenly, center);
     width: 100%;
-    padding: 0 30px;
   }
 
   h3 {
@@ -33,7 +32,7 @@ body {
   #products,
   #category {
     border: none;
-    min-width: 240px;
+    min-width: 280px;
     height: 40px;
     text-align: center;
     outline: none;
@@ -51,6 +50,7 @@ body {
 
   form {
     width: 100%;
+    margin: 0 auto;
     @include display(flex, space-around, center);
 
     label {
@@ -59,7 +59,6 @@ body {
       grid-template-columns: repeat(240px, 240px);
       grid-template-areas: "h4 h4" "input fi";
       color: $primaryColor;
-      margin-right: 30px;
     }
 
     h4 {
@@ -81,7 +80,7 @@ body {
 
     input[type="text"] {
       grid-area: input;
-      width: 200px;
+      width: 240px;
       border: none;
       padding: 15px;
       height: 40px;
@@ -91,6 +90,27 @@ body {
       }
     }
   }
+}
+
+@include media(M) {
+  .container {
+    flex-direction: column;
+    margin: 50px auto;
+
+    .category {
+      margin-bottom: 20px;
+    }
+  }
+
+  .addProducts {
+
+    form {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+  
+
 }
 
 // @include media(L) {

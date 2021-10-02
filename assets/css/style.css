@@ -25,14 +25,12 @@ body {
   display: grid;
   justify-content: space-around;
   align-items: center;
-  text-align: start;
 }
 .container .products {
   display: grid;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  padding: 0 30px;
 }
 .container h3 {
   margin: 0 10px 15px 0;
@@ -41,7 +39,7 @@ body {
 .container #products,
 .container #category {
   border: none;
-  min-width: 240px;
+  min-width: 280px;
   height: 40px;
   text-align: center;
   outline: none;
@@ -59,6 +57,7 @@ body {
 }
 .addProducts form {
   width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,7 +70,6 @@ body {
   grid-template-columns: repeat(240px, 240px);
   grid-template-areas: "h4 h4" "input fi";
   color: #00bfff;
-  margin-right: 30px;
 }
 .addProducts form h4 {
   grid-area: h4;
@@ -90,7 +88,7 @@ body {
 }
 .addProducts form input[type=text] {
   grid-area: input;
-  width: 200px;
+  width: 240px;
   border: none;
   padding: 15px;
   height: 40px;
@@ -98,6 +96,21 @@ body {
 }
 .addProducts form input[type=text]:hover {
   border: 2px solid #00bfff;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+  .container .category {
+    margin-bottom: 20px;
+  }
+
+  .addProducts form {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
